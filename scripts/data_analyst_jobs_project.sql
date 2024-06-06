@@ -54,6 +54,7 @@
 -- FROM data_analyst_jobs
 -- GROUP BY location
 -- ORDER BY avg_state_rating desc
+
 -- NE has highest star rating average
 
 -- 7.	Select unique job titles from the data_analyst_jobs table. How many are there?
@@ -73,11 +74,11 @@
 
 -- 9.	Find the name of each company and its average star rating for all companies that have more than 5000 reviews across all locations. How many companies are there with more that 5000 reviews across all locations?
 
--- SELECT DISTINCT company , AVG(star_rating)
+-- SELECT count(DISTINCT company) , AVG(star_rating)
 -- FROM data_analyst_jobs
 -- WHERE review_count > 5000
--- GROUP BY company
--- 41
+-- --GROUP BY company
+-- 40
 
 -- 10.	Add the code to order the query in #9 from highest to lowest average star rating. Which company with more than 5000 reviews across all locations in the dataset has the highest star rating? What is that rating?
 -- SELECT DISTINCT company, AVG(star_rating) AS company_avg_star_rating
@@ -86,6 +87,7 @@
 -- GROUP BY company
 -- ORDER BY company_avg_star_rating desc
 
+	
 --American Express, General Motors, Kaiser Permanente, Microsoft, Nike & Unilever have a star rating of 4.1999998090000000
 
 
@@ -114,13 +116,18 @@
 --   - Which three industries are in the top 4 on this list? How many jobs have been listed for more than 3 weeks for each of the top 4?
 
 
--- SELECT domain
+-- SELECT domain AS hard_to_fill 
 -- from data_analyst_jobs
--- WHERE title ILIKE '%SQL%'
+-- WHERE skill ILIKE '%SQL%'
 -- AND days_since_posting >21
--- ORDER BY days_since_posting desc
+-- ORDER BY hard_to_fill desc
 
--- Insurance Health Care, Health Care, Banks and Financial Services
 
---working on last part of bonus
+--Transport & Freight, Telecommunications, Retail
+-- 619 (including null)
+
+
+
+
+
 
